@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=MyBubble
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ MyBubble\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=ns1\ inp\ outp
+comment1.target=MyBubble(java.util.ArrayList,\ int,\ int)
+comment2.params=
+comment2.target=void\ paint()
+comment3.params=
+comment3.target=void\ act()
+comment4.params=b
+comment4.target=void\ think(Bubble)
+comment5.params=
+comment5.target=void\ keyboard()
+numComments=6

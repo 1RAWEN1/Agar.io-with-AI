@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.target=Node
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Node\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=void\ act()
+comment2.params=connections1\ weight1\ bias1
+comment2.target=void\ createNode(java.util.ArrayList,\ java.util.ArrayList,\ double)
+comment3.params=nodes1
+comment3.target=void\ summ(java.util.ArrayList)
+comment4.params=nodes1
+comment4.target=void\ summ1(java.util.ArrayList)
+comment5.params=x
+comment5.target=double\ sigmoid(double)
+comment6.params=x
+comment6.target=double\ tanh(double)
+comment7.params=x
+comment7.target=double\ ReLu(double)
+comment8.params=x\ step
+comment8.target=double\ stepFun(double,\ double)
+numComments=9
