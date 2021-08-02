@@ -14,7 +14,7 @@ public class MyWorld extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(800, 600, 1);
-        //prepare();
+        prepare1();
     }
     MyBubble bestBubble;
     ArrayList<MyBubble> bBubble;
@@ -46,16 +46,20 @@ public class MyWorld extends World
     public void setBBubble(ArrayList<MyBubble> bb1){
         bBubble=(ArrayList<MyBubble>)bb1.clone();
     }
-    
+    public void prepare1(){
+        sp=new Spectator();
+        addObject(sp,400,300);
+        flab=new Label("Функция приспособленности: ",20);
+        addObject(flab, 150, 30);
+    }
     //GreenfootImage background=getBackground();
     GreenfootImage background1;
     GreenfootImage nsimage;
     Ser ser1;
     Spectator sp;
-    private void prepare()
+    Label flab;
+    public void prepare()
     {
-        sp=new Spectator();
-        addObject(sp,400,300);
         if(bestBubble==null){
             try{
                 ObjectInputStream ois=new ObjectInputStream(new FileInputStream("save.ser"));
@@ -95,9 +99,9 @@ public class MyWorld extends World
             }
             getBackground().setColor(Color.WHITE);
             getBackground().fill();
-            addObject(new Label("Функция приспособленности: "+(double)bestBubble.d/50,20), 150, 30);
             nsimage=bestBubble.ns.drawNN();
             getBackground().drawImage(nsimage,400-nsimage.getWidth()/2,300-nsimage.getHeight()/2);
+            flab.setValue("Функция приспособленности: "+(double)bestBubble.d/50);
             //setBackground(background);
         }
     }
