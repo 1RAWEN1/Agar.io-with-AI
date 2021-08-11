@@ -18,7 +18,7 @@ public class MyBubble extends Actor
       paint();
       //radius.drawOval(0,0,200,200);
       if(ns1==null){
-          ns.createNN(7, 2);
+          ns.createNN(6, 2);
       }
       else{
           ns.createNN(ns1, inp, outp);
@@ -91,13 +91,12 @@ public class MyBubble extends Actor
             }
             ns.setInputVal(1,(double)getRotation()/360);
             ns.setInputVal(2,(double)d1);
-            ns.setInputVal(3,(double)b.d/50);
+            ns.setInputVal(3,(double)(d-b.d)/50);
             //ns.setInputVal(5,(double)getX()/getWorld().getWidth());
             //ns.setInputVal(6,(double)getY()/getWorld().getHeight());
             ns.setInputVal(4,(double)b.getRotation()/360);
-            ns.setInputVal(5,(double)d/50);
-            ns.setInputVal(6,(double)getX()/getWorld().getWidth());
-            ns.setInputVal(7,(double)getY()/getWorld().getHeight());
+            ns.setInputVal(5,(double)getX()/getWorld().getWidth());
+            ns.setInputVal(6,(double)getY()/getWorld().getHeight());
             /*if(getRotation()>315 || getRotation()<=45){
                 ns.setInputVal(1,(double)getRotation()/360);
                 ns.setInputVal(2,(double)d1);
@@ -127,14 +126,13 @@ public class MyBubble extends Actor
             ns.think();
         }
         else{
-            /*ns.setInputVal(1,(double)0);
+            ns.setInputVal(1,(double)0);
             ns.setInputVal(2,(double)0);
             ns.setInputVal(3,(double)0);
             ns.setInputVal(4,(double)0);
-            ns.setInputVal(5,(double)d/50);
-            ns.setInputVal(6,(double)getX()/getWorld().getWidth());
-            ns.setInputVal(7,(double)getY()/getWorld().getHeight());
-            ns.think();*/
+            ns.setInputVal(5,(double)getX()/getWorld().getWidth());
+            ns.setInputVal(6,(double)getY()/getWorld().getHeight());
+            ns.think();
         }
     }
     
